@@ -8,18 +8,18 @@ const app = express();
 
 app.use(logger);
 
-app.get("/person", validation, function(req, res){
-    const name = req.query.name;
-    res.setHeader('content-type', 'application/json');
-    res.send({name});
-})
+app.get("/person", validation, function (req, res) {
+  const name = req.query.name;
+  res.setHeader("content-type", "application/json");
+  res.send({ name });
+});
 
 app.use(errorHandler404);
 app.use(errorHandler500);
 
-const start = function(opts) {
-    const PORT = opts.PORT;
-    app.listen(PORT, () => console.log("Server Started"));
-}
+const start = function (opts) {
+  const PORT = opts.PORT;
+  app.listen(PORT, () => console.log("Server Started"));
+};
 
-module.exports = {start, app};
+module.exports = { start, app };
