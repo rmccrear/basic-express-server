@@ -11,3 +11,4 @@ If the route is missing the `name` query parameter, an error is raised. The erro
 
 If the route is not found, a 404 error is raised by the error handler in  `src/error-handlers/404.js`
 
+The app is live here: [https://basic-express-server-w.herokuapp.com/person?name=Mark](https://basic-express-server-w.herokuapp.com/person?name=Mark)
