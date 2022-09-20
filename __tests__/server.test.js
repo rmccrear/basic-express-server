@@ -23,6 +23,7 @@ describe("Test app routes", () => {
       await request.get("/child?name=Mark").expect(404);
       await request.get("/child?abcd=Mark").expect(404);
       await request.get("/child").expect(404);
+      await request.post("/person")
     });
   });
 });
