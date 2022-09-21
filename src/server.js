@@ -10,8 +10,7 @@ app.use(logger);
 
 app.get("/person", validation, function (req, res) {
   const name = req.query.name;
-  res.setHeader("content-type", "application/json");
-  res.send({ name });
+  res.json({ name });
 });
 
 app.use(errorHandler404);
