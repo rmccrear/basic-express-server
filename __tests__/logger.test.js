@@ -12,8 +12,7 @@ describe("Test Logger", () => {
       method: "GET",
     };
     logger(req, {}, () => {});
-    expect(logSpy).toHaveBeenCalled();
-    expect(logSpy.mock.calls[0][0].match(/path-to-route/));
-    expect(logSpy.mock.calls[0][0].match(/GET/));
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/path-to-route/));
+    expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/GET/));
   });
 });
